@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="horizontal" android:id="@+id/MainLayout">
+	<FrameLayout android:layout_width="match_parent"
+		android:layout_height="match_parent" android:id="@+id/Container">
+		<AbsoluteLayout android:layout_height="match_parent" android:layout_width="match_parent" android:id="@+id/ChooseACountry">
+			<TextView android:textSize="25sp" android:layout_width="fill_parent" android:layout_y="112dip" android:id="@+id/textView1" android:layout_x="2dip" android:text="@string/Culture" android:gravity="center_vertical|center_horizontal" android:layout_height="wrap_content"></TextView>
+			<Spinner android:layout_width="match_parent" android:layout_y="190dip" android:id="@+id/Countries" android:layout_height="wrap_content" android:layout_x="1dip"></Spinner>
+		</AbsoluteLayout>
+		<AbsoluteLayout android:layout_height="match_parent" android:layout_width="match_parent" android:id="@+id/CountryInformaition">
+			<TableRow android:baselineAligned="true" android:layout_width="match_parent" android:id="@+id/TableRow01" android:layout_y="347dip" android:layout_height="80dip" android:layout_x="0dip">
+				<Button android:layout_height="match_parent" android:id="@+id/Button01" android:text="Gestures" android:layout_width="wrap_content" android:layout_gravity="center" android:layout_weight="1"></Button>
+				<Button android:layout_height="match_parent" android:id="@+id/Button02" android:text="Phrases" android:layout_width="wrap_content" android:layout_weight="1"></Button>
+			</TableRow>
+			<ImageView android:id="@+id/CountryImage" android:layout_width="wrap_content" android:src="@drawable/icon" android:layout_y="73dip" android:layout_height="wrap_content" android:layout_x="130dip"></ImageView>
+			<TableRow android:baselineAligned="true" android:layout_width="match_parent" android:id="@+id/TableRow02" android:layout_y="0dip" android:layout_height="wrap_content" android:layout_x="0dip">
+				<Button android:layout_height="wrap_content" android:id="@+id/PreviousCountry" android:text="Previous" android:layout_width="wrap_content" android:layout_gravity="center" android:layout_weight="1"></Button>
+				<TextView android:layout_height="wrap_content" android:textSize="20sp" android:text="The Country" android:layout_width="wrap_content" android:gravity="center_vertical|center_horizontal" android:layout_weight="1" android:id="@+id/countryName"></TextView>
+				<Button android:layout_height="wrap_content" android:id="@+id/NextCountry" android:text="Next" android:layout_width="wrap_content" android:layout_weight="1"></Button>
+			</TableRow>
+			<TextView android:layout_width="match_parent" android:layout_y="161dip" android:id="@+id/CountryInfo" android:layout_x="0dip" android:text="TextView" android:layout_height="170dip"></TextView>
+		</AbsoluteLayout>
+		<AbsoluteLayout android:layout_height="match_parent" android:layout_width="match_parent" android:id="@+id/ViewGestureInformation">
+			<TableRow android:baselineAligned="true" android:layout_width="match_parent" android:id="@+id/tableRow1" android:layout_height="wrap_content">
+				<Button android:layout_height="wrap_content" android:id="@+id/PreviousGesture" android:text="Previous" android:layout_width="wrap_content" android:layout_gravity="center" android:layout_weight="1"></Button>
+				<TextView android:layout_height="wrap_content" android:textSize="20sp" android:id="@+id/GestureName" android:text="The Phrase" android:layout_width="wrap_content" android:gravity="center_vertical|center_horizontal" android:layout_weight="1"></TextView>
+				<Button android:layout_height="wrap_content" android:id="@+id/NextGesture" android:text="Next" android:layout_width="wrap_content" android:layout_weight="1"></Button>
+			</TableRow>
+			<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_y="95dip" android:id="@+id/linearLayout2" android:layout_height="match_parent" android:layout_x="2dip">
+				<ImageView android:id="@+id/GestureImage" android:src="@drawable/icon" android:layout_height="wrap_content" android:layout_width="match_parent"></ImageView>
+				<TextView android:layout_width="match_parent" android:id="@+id/GestureInformation" android:text="TextView" android:layout_height="wrap_content"></TextView>
+			</LinearLayout>
+		</AbsoluteLayout>
+		<AbsoluteLayout android:layout_height="match_parent" android:layout_width="match_parent" android:id="@+id/ChooseGesture">
+			<Spinner android:layout_width="match_parent" android:layout_y="109dip" android:id="@+id/Gestures" android:layout_height="wrap_content" android:layout_x="2dip"></Spinner>
+			<TextView android:textSize="25sp" android:layout_width="fill_parent" android:layout_y="68dip" android:id="@+id/TextView01" android:layout_x="1dip" android:text="Gestures" android:gravity="center_vertical|center_horizontal" android:layout_height="wrap_content"></TextView>
+			<Button android:id="@+id/GoBackToCountryFromGesture" android:layout_width="wrap_content" android:layout_y="2dip" android:layout_x="1dip" android:text="Go back" android:layout_height="wrap_content"></Button>
+		</AbsoluteLayout>
+		<AbsoluteLayout android:layout_height="match_parent" android:layout_width="match_parent" android:id="@+id/CommonPhrases">
+			<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:id="@+id/linearLayout1" android:layout_height="match_parent">
+				<Button android:id="@+id/GoBackToCountry" android:layout_width="wrap_content" android:text="Go Back" android:layout_height="wrap_content"></Button>
+				<TextView android:textSize="23sp" android:layout_width="match_parent" android:id="@+id/textView4" android:text="Phrases" android:layout_height="wrap_content" android:gravity="center_vertical|center_horizontal"></TextView>
+				<TextView android:layout_width="match_parent" android:id="@+id/CommonPhrasesInfo" android:text="TextView" android:layout_height="match_parent"></TextView>
+			</LinearLayout>
+		</AbsoluteLayout>
+	</FrameLayout>
+</LinearLayout>
