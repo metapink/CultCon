@@ -14,47 +14,56 @@ public final class R {
         public static final int icon=0x7f020000;
     }
     public static final class id {
-        public static final int Button01=0x7f050007;
-        public static final int Button02=0x7f050008;
-        public static final int ChooseACountry=0x7f050002;
-        public static final int ChooseGesture=0x7f050017;
-        public static final int CommonPhrases=0x7f05001b;
-        public static final int CommonPhrasesInfo=0x7f05001f;
-        public static final int Container=0x7f050001;
-        public static final int Countries=0x7f050004;
-        public static final int CountryImage=0x7f050009;
-        public static final int CountryInfo=0x7f05000e;
-        public static final int CountryInformaition=0x7f050005;
-        public static final int GestureImage=0x7f050015;
-        public static final int GestureInformation=0x7f050016;
-        public static final int GestureName=0x7f050012;
-        public static final int Gestures=0x7f050018;
-        public static final int GoBackToCountry=0x7f05001d;
-        public static final int GoBackToCountryFromGesture=0x7f05001a;
-        public static final int MainLayout=0x7f050000;
-        public static final int NextCountry=0x7f05000d;
-        public static final int NextGesture=0x7f050013;
-        public static final int PreviousCountry=0x7f05000b;
-        public static final int PreviousGesture=0x7f050011;
-        public static final int TableRow01=0x7f050006;
-        public static final int TableRow02=0x7f05000a;
-        public static final int TextView01=0x7f050019;
-        public static final int ViewGestureInformation=0x7f05000f;
-        public static final int countryName=0x7f05000c;
-        public static final int linearLayout1=0x7f05001c;
-        public static final int linearLayout2=0x7f050014;
-        public static final int tableRow1=0x7f050010;
-        public static final int textView1=0x7f050003;
-        public static final int textView4=0x7f05001e;
+        public static final int BGestures=0x7f060008;
+        public static final int ChooseACountry=0x7f060002;
+        public static final int ChooseGesture=0x7f060010;
+        public static final int CommonPhrases=0x7f06001c;
+        public static final int CommonPhrasesInfo=0x7f060020;
+        public static final int Container=0x7f060001;
+        public static final int Countries=0x7f060004;
+        public static final int CountryChooser=0x7f06000b;
+        public static final int CountryImage=0x7f06000d;
+        public static final int CountryInfo=0x7f06000f;
+        public static final int CountryInformaition=0x7f060006;
+        public static final int GestureChooser=0x7f060014;
+        public static final int GestureImage=0x7f060019;
+        public static final int GestureInformation=0x7f06001b;
+        public static final int GestureName=0x7f060018;
+        public static final int Gestures=0x7f060013;
+        public static final int GoBackToCountryFromGesture=0x7f060011;
+        public static final int GoBackToCountryInformation=0x7f06001e;
+        public static final int GoBackToGesture=0x7f060017;
+        public static final int GoToSellectedCountry=0x7f060005;
+        public static final int MainLayout=0x7f060000;
+        public static final int Phrases=0x7f060009;
+        public static final int TableRow01=0x7f060007;
+        public static final int TableRow02=0x7f06000a;
+        public static final int TextView01=0x7f060012;
+        public static final int ViewGestureInformation=0x7f060015;
+        public static final int countryName=0x7f06000c;
+        public static final int linearLayout1=0x7f06001d;
+        public static final int scrollView1=0x7f06000e;
+        public static final int scrollView2=0x7f06001a;
+        public static final int tableRow1=0x7f060016;
+        public static final int textView1=0x7f060003;
+        public static final int textView4=0x7f06001f;
     }
     public static final class layout {
         public static final int main=0x7f030000;
     }
+    public static final class raw {
+        public static final int test2=0x7f040000;
+        public static final int test3=0x7f040001;
+        public static final int test4=0x7f040002;
+        public static final int test5=0x7f040003;
+        public static final int test6=0x7f040004;
+        public static final int test7=0x7f040005;
+    }
     public static final class string {
-        public static final int AddNewString=0x7f040002;
-        public static final int ButtonText=0x7f040004;
-        public static final int Culture=0x7f040003;
-        public static final int app_name=0x7f040001;
-        public static final int hello=0x7f040000;
+        public static final int AddNewString=0x7f050002;
+        public static final int ButtonText=0x7f050004;
+        public static final int Culture=0x7f050003;
+        public static final int app_name=0x7f050001;
+        public static final int hello=0x7f050000;
     }
 }
