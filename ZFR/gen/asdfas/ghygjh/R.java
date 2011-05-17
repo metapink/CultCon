@@ -52,12 +52,13 @@ public final class R {
         public static final int main=0x7f030000;
     }
     public static final class raw {
-        public static final int test2=0x7f040000;
-        public static final int test3=0x7f040001;
-        public static final int test4=0x7f040002;
-        public static final int test5=0x7f040003;
-        public static final int test6=0x7f040004;
-        public static final int test7=0x7f040005;
+        public static final int back=0x7f040000;
+        public static final int test2=0x7f040001;
+        public static final int test3=0x7f040002;
+        public static final int test4=0x7f040003;
+        public static final int test5=0x7f040004;
+        public static final int test6=0x7f040005;
+        public static final int test7=0x7f040006;
     }
     public static final class string {
         public static final int AddNewString=0x7f050002;

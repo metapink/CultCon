@@ -51,6 +51,12 @@ public class VisualForm extends Activity
 		final AbsoluteLayout ChooseGesture = (AbsoluteLayout) findViewById(R.id.ChooseGesture);
 		final AbsoluteLayout ViewGestureInformation = (AbsoluteLayout) findViewById(R.id.ViewGestureInformation);
 
+		ChooseACountry.setBackgroundDrawable(Drawable.createFromPath("/mnt/sdcard/back.JPG"));
+		CountryInformaition.setBackgroundDrawable(Drawable.createFromPath("/mnt/sdcard/back.JPG"));
+		CommonPhrases.setBackgroundDrawable(Drawable.createFromPath("/mnt/sdcard/back.JPG"));
+		ChooseGesture.setBackgroundDrawable(Drawable.createFromPath("/mnt/sdcard/back.JPG"));
+		ViewGestureInformation.setBackgroundDrawable(Drawable.createFromPath("/mnt/sdcard/back.JPG"));
+		
 		final Button CountryChooser = (Button) findViewById(R.id.CountryChooser);
 		final Button GestureChooser = (Button) findViewById(R.id.GestureChooser);
 		Button selectedCountry = (Button) findViewById(R.id.GoToSellectedCountry);
@@ -67,7 +73,7 @@ public class VisualForm extends Activity
 		TextView GestureInformation = (TextView) findViewById(R.id.GestureInformation);
 		final TextView CountryName = (TextView) findViewById(R.id.countryName);
 		final ImageView CountryPicture = (ImageView) findViewById(R.id.CountryImage);
-		ImageView GesturePicture = (ImageView) findViewById(R.id.GestureImage);
+		final ImageView GesturePicture = (ImageView) findViewById(R.id.GestureImage);
 
 		
 		CountryInformaition.setVisibility(View.GONE);
@@ -101,10 +107,7 @@ public class VisualForm extends Activity
 			public void onClick(View v) 
 			{
 				ChooseACountry.setVisibility(View.GONE);
-
-				File file = new File(env, info.get(Countries.getSelectedItemPosition()).getPicturePath());
-				CountryPicture.setBackgroundDrawable(
-						Drawable.createFromPath(file.toString()));
+				CountryPicture.setBackgroundDrawable(Drawable.createFromPath(info.get(Countries.getSelectedItemPosition()).getPicturePath()));
 				CountryName.setText(info.get(Countries.getSelectedItemPosition()).getName());
 				CountryInfo.setText(info.get(Countries.getSelectedItemPosition()).getDescription());
 				CountryInformaition.setVisibility(View.VISIBLE);
@@ -126,6 +129,7 @@ public class VisualForm extends Activity
 			{
 				
 				ViewGestureInformation.setVisibility(View.VISIBLE);
+				GesturePicture.setBackgroundDrawable(Drawable.createFromPath(info.get(Countries.getSelectedItemPosition()).getPicturePath()));
 				CountryInfo.setText(info.get(Countries.getSelectedItemPosition()).getDescription());
 				ChooseGesture.setVisibility(View.GONE);
 
