@@ -1,0 +1,25 @@
+<gestures>
+  <gesture>
+    <name>Peace</name>
+    <image>images/peace.gif</image>
+    <description>Two fingers forming "V"</description>
+  </gesture>
+
+  <gesture>
+    <name></name>
+    <image></image>
+    <description></description>
+  </gesture>
+
+  <gesture>
+    <name></name>
+    <image></image>
+    <description></description>
+  </gesture>
+
+  <gesture>
+    <name></name>
+    <image></image>
+    <description></description>
+  </gesture>
+</gestures>

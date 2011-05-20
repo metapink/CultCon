@@ -1,0 +1,25 @@
+<phrases>
+  <pharase>
+    <english>Hello</english>
+    <name>Sharshe' ly'a f^am</name>
+    <description></description>
+  </pharase>
+  
+  <pharase>
+    <english>Please</english>
+    <name>Merci'</name>
+    <description></description>
+  </pharase>
+
+  <pharase>
+    <english>Thank you</english>
+    <name>Bonjour</name>
+    <description></description>
+  </pharase>
+  
+  <pharase>
+    <english>Good bye</english>
+    <name>Selavi</name>
+    <description></description>
+  </pharase>
+</phrases>
