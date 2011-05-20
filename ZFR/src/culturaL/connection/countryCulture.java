@@ -3,11 +3,16 @@
  */
 package culturaL.connection;
 
-import java.io.BufferedInputStream;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
+
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -17,6 +22,9 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import android.os.Environment;
+import java.util.Enumeration;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
 
 /**
  * @author BASSman
@@ -28,11 +36,9 @@ public class countryCulture
 	private String countryName;
 	private String picturePathName;
 	private String theDescription;
-	public countryCulture(String file)
+	public countryCulture(InputStream file)
 	{
-		
-		File filepath = new File(file);	
-		readTheXml(filepath);				
+		readTheXml(file);					
 	}
 	public String getDescription()
 	{
@@ -46,7 +52,7 @@ public class countryCulture
 	{
 		return picturePathName;
 	}
-	public void readTheXml(File filepath)
+	public void readTheXml(InputStream br)
 	{	
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 	    try 
@@ -56,16 +62,16 @@ public class countryCulture
 	        DocumentBuilder db = dbf.newDocumentBuilder();
 
 	        //parse using builder to get DOM representation of the XML file
-	        Document dom =  db.parse(filepath);
+	        Document dom =  db.parse(br);
 
 	        dom.getDocumentElement().normalize();
 
-	        NodeList fstNmElmntLst = dom.getElementsByTagName("countryName");
+	        NodeList fstNmElmntLst = dom.getElementsByTagName("gestureName");
 	        Element fstNmElmnt = (Element) fstNmElmntLst.item(0);
 	        NodeList fstNm = fstNmElmnt.getChildNodes();
 	        System.out.println("countryName : "  + ((Node) fstNm.item(0)).getNodeValue());
 
-	        NodeList sndNmElmntLst = dom.getElementsByTagName("countryPicturPath");
+	        NodeList sndNmElmntLst = dom.getElementsByTagName("gesturePicturPath");
 	        Element sndNmElmnt = (Element) sndNmElmntLst.item(0);
 	        NodeList sndNm = sndNmElmnt.getChildNodes();
 	        System.out.println("countryPicturPath : "  + ((Node) sndNm.item(0)).getNodeValue());

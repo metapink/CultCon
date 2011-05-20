@@ -3,7 +3,10 @@ package culturaL.connection;
 
 
 import java.io.File;
+import java.util.Enumeration;
 import java.util.LinkedList;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
 
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
@@ -31,7 +34,7 @@ public class VisualForm extends Activity
 	
 	
 	/** Called when the activity is first created. */
-	int currentIndex = 0;
+	int currentIndex = 0; 
 	public void onCreate(Bundle savedInstanceState) 
 	{
 		
@@ -41,8 +44,8 @@ public class VisualForm extends Activity
 		setContentView(R.layout.main);
 		
 		
-		LinearLayout MainContainer = (LinearLayout) findViewById(R.id.MainLayout);
-		FrameLayout StackContainer = (FrameLayout) findViewById(R.id.Container);
+		//LinearLayout MainContainer = (LinearLayout) findViewById(R.id.MainLayout);
+		//FrameLayout StackContainer = (FrameLayout) findViewById(R.id.Container);
 		
 
 		final AbsoluteLayout ChooseACountry = (AbsoluteLayout) findViewById(R.id.ChooseACountry);
@@ -86,20 +89,40 @@ public class VisualForm extends Activity
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		
 		final File env = Environment.getExternalStorageDirectory();
-
-	    for (File listOfFile : env.listFiles())
-	    {
-	    	if (!listOfFile.isDirectory()&& listOfFile.getPath().endsWith(".xml"))
-	    	{
-	    		final countryCulture countryInfo = 
-	    			new countryCulture(listOfFile.toString());
-	    		info.add(countryInfo);
-	    		adapter.add(countryInfo.getName());
-	    	}
+		
+		
+		
+		try 
+		{
+	      ZipFile zf = new ZipFile(env + "\\t1.zip");
+	      Enumeration entries = zf.entries();
+	      while (entries.hasMoreElements()) 
+	      {
+	        ZipEntry ze = (ZipEntry) entries.nextElement();
 	        
-	    }
+	        File thefile = new File(env+"\\"+ze);
+	        final countryCulture countryInfo = 
+	        	new countryCulture(zf.getInputStream(ze));
+	        info.add(countryInfo);
+	        adapter.add(countryInfo.getName());
+	      }
+		} 
+		catch (Exception e)  
+		{
+		      e.printStackTrace();
+		}
+//	    for (File listOfFile : env.listFiles())
+//	    {
+//	    	if (!listOfFile.isDirectory()&& listOfFile.getPath().endsWith(".xml"))
+//	    	{
+//	    		final countryCulture countryInfo = 
+//	    			new countryCulture(listOfFile.toString());
+//	    		info.add(countryInfo);
+//	    		adapter.add(countryInfo.getName());
+//	    	}
+//	        
+//	    }
 
-		final int MAX =  adapter.getCount() - 1;
 		Countries.setAdapter(adapter);
 		System.out.println(Countries.getSelectedItem().toString());		
 		
